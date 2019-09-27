@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import NavBar from '../common/NavBar';
 import { connect } from 'react-redux';
 import { loginUser } from '../../store/actions/authenticationActions';
-import { dispatch } from 'rxjs/internal/observable/range';
 import PropTypes from 'prop-types';
 
 const Login = ({ loading, error, loginUser, history }) => {
@@ -28,17 +27,17 @@ const Login = ({ loading, error, loginUser, history }) => {
       </div>
       <form>
         <input
-          type="text"
-          name="username"
-          placeholder="password"
+          type='text'
+          name='username'
+          placeholder='password'
           value={userText}
           onChange={e => setUserText(e.target.value)}
         />
         <br />
         <input
-          type="password"
-          name="password"
-          placeholder="password"
+          type='password'
+          name='password'
+          placeholder='password'
           value={passwordText}
           onChange={e => setPasswordTest(e.target.value)}
         />
